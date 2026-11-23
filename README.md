@@ -21,38 +21,36 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
 ## The day
 
-- **Lead 1 — Nepal–India:** Nepal PM Balendra Shah meets PM Modi in New Delhi
-  on his first India visit since taking office in March — talks at Hyderabad
-  House, a joint press conference and a luncheon. Kathmandu asks for a $2bn
-  aid package and three new air routes. (MEA / Deccan Herald, FORECAST)
-- **Lead 2 — Markets:** Asia braces for another rout after Wall Street's
-  sell-off — Tokyo shut for a holiday, MSCI's Asia gauge 18% below its June
-  peak, the Nasdaq 100 coming off its worst week since March 2020.
-  (Bloomberg / The Edge, CONFIRMED)
-- **Lead 3 — Iran war:** Trump tells Fox News he is "inclined" to resume
-  strikes on Iran if no deal is reached by the New Year, and calls Iran's
-  negotiators "professional tap dancers". (Fox News / Times Now, REPORTED)
+- **Lead 1 — Markets:** Friday's rout (S&P -3.7%, Nasdaq 100 -5.6% into
+  correction, Nvidia -14% on an SEC accounting probe) turns into a Monday
+  rebound — Korea's $8bn stabilisation fund, China's margin cut, Taiwan's
+  short-selling curbs, and US futures jumping back (S&P +2.2%, Nasdaq +3.0%).
+  (Bloomberg / Reuters, CONFIRMED)
+- **Lead 2 — Iran war:** Tehran vows "all available means" against the US
+  naval blockade and offers to reopen the Strait of Hormuz if it lifts,
+  after Trump's Sunday dare to test the blockade. (AFP / Gulf News, REPORTED)
+- **Lead 3 — Ukraine:** Russian strikes kill 11 in the Kyiv region;
+  Zelenskyy urges NATO's assembly to bolster Ukraine's air defence.
+  (AP / Arab News, REPORTED)
 
 **38 stories in all:** 3 big illustrated leads, 10 small illustrated stories
-(Saar condemns the West Bank settler attacks, the CENTCOM chief ends his
-Middle East tour, Pezeshkian denies a government rift, Tehran's mine claims
-in Hormuz, Jordan's search for a missing sailor, the Houthi shelling of
-Taiz, Fonterra's 22-million-litre milk dump, the final day in Wellington,
-Modi on AI and skilled jobs, the IFFI BRICS roundtable) and 25 one-line
-briefs — plus a UTC timeline, a day-in-numbers strip, a world map with 8
-pins, and a DATE CHECK footer naming what was left out.
+(the Modi–Shah talks ending in Delhi, New Zealand saving the Wellington
+Test, Sánchez's fortune tax, Eisenkot's Netanyahu bid, Germany up and France
+down on the PMIs, the capture of "El Chapo Isidro", Bolsonaro in intensive
+care, Belgian airports shut by strike, the Ebola response hit in Congo,
+Denmark's school phone ban) and 25 one-line briefs — plus a UTC timeline, a
+day-in-numbers strip, a world map with 8 pins, and a DATE CHECK footer
+naming what was left out.
 
 ## Date discipline
 
-Every story happened, or was first reported, on Monday 23 November 2026, or
-is a Monday event marked FORECAST (the Modi–Shah talks, the Wellington final
-day, the market opens). No prior-day story is on the page. The DATE CHECK
-footer names what was excluded: the COP31 collapse, the ATP final (Alcaraz
-beat Zverev 6-2, 7-6(7)), BepiColombo reaching Mercury, the Sparta II fire,
-the Cikande fire update, the Dymer strike, South Korea's education minister
-resigning, the India–China talks concluding, the Trump–Kim report, and the
-Lisbon march — all Sunday's (or Saturday's) news. Not yet known at press
-time: the US market open, the Modi–Shah outcome, and the Wellington result.
+Every story happened, or was first reported, on Monday 23 November 2026.
+Sunday's news is NOT on the page: the COP31 collapse, the Democrats
+clinching 258 House seats, Márquez's eighth MotoGP title, the ATP final,
+BepiColombo reaching Mercury, the Sparta II fire, the Dymer strike and the
+Lisbon march are all named in the DATE CHECK footer as excluded. Not yet
+known at press time: the US market open result and the rest of Monday's
+news — the full edition lands Tuesday.
 
 Every story carries a source and a status tag: CONFIRMED (verified by two
 sources), REPORTED (as reported), CLAIM (one side's account), FORECAST
@@ -72,17 +70,16 @@ python3 draw.py
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-`entry.png` is 1024×1024, under 1 MiB. This is the early edition, drawn in
-the first hour of Monday 23 November 2026 (UTC); the day's full paper lands
-in the final rebuild on Tuesday.
+`entry.png` is 1024×1024, under 1 MiB. This is the day edition, drawn in
+the afternoon of Monday 23 November 2026 (UTC); the full edition lands in
+the final rebuild on Tuesday.
 
 ## Verification
 
 - Rendered and viewed at full size and at 300px wide: the date, the three
   leads and the big numbers read at thumbnail size; every story has a picture.
 - `main.ts` run twice locally; both runs wrote byte-identical `entry.png`.
-- Region tally recomputed: Asia 18 + Middle East 12 + Europe 2 + Americas 3
-  + Oceania 2 + Sport 1 = 38 stories.
-- All facts checked against live reporting on 23 Nov 2026 (Bloomberg, The
-  Edge, Deccan Herald, MEA, NDTV, RNZ, Times Now, Fox News, Cricinfo,
-  Reuters, AFP, AP).
+- Region tally recomputed: Asia 8 + Middle East 8 + Europe 9 + Americas 7
+  + Africa 3 + Oceania 1 + Sport 1 + Global 1 = 38 stories.
+- All facts checked against live reporting on 23 Nov 2026 (Bloomberg,
+  Reuters, AFP, AP, WION, Dawn, Arab News, Gulf News, Cricinfo, CNBC).

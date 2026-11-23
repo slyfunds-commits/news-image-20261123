@@ -83,132 +83,129 @@ def source_line(draw, x, y, source, status, max_w):
 # ---------------------------------------------------------------- stories
 # Each lead: (headline, body, source, status, picture key)
 LEADS = [
-    ("NEPAL PM MEETS MODI TODAY",
-     "First India visit since March: talks at Hyderabad House, a press "
-     "conference, a luncheon. Kathmandu asks for $2bn in aid and three "
-     "new air routes.",
-     "MEA / DECCAN HERALD", "FORECAST", "nepal"),
-    ("ASIA BRACES FOR ANOTHER ROUT",
-     "Tokyo shut for a holiday as Asia braces for more selling. MSCI "
-     "Asia is 18% below its June peak; the Nasdaq 100 just had its "
-     "worst week since March 2020.",
-     "BLOOMBERG / THE EDGE", "CONFIRMED", "markets"),
-    ("TRUMP: STRIKES ON IRAN COULD RESUME AFTER JAN 1",
-     "Trump: he is \u201cinclined\u201d to resume strikes if no deal by the New "
-     "Year, and calls Iran's negotiators \u201cprofessional tap dancers\u201d.",
-     "FOX NEWS / TIMES NOW", "REPORTED", "iran"),
+    ("MARKETS REBOUND AFTER THE ROUT",
+     "Friday: S&P -3.7%, Nasdaq 100 -5.6% into correction; Nvidia -14% on an "
+     "SEC probe. Monday: Korea's $8bn fund, China's margin cut — and US "
+     "futures jump.",
+     "BLOOMBERG / REUTERS", "CONFIRMED", "markets"),
+    ("IRAN: WE'LL FIGHT THE BLOCKADE",
+     "Tehran vows \u201call available means\u201d against the US blockade and offers "
+     "to reopen Hormuz if it lifts. Trump dares Iran to test it.",
+     "AFP / GULF NEWS", "REPORTED", "iran"),
+    ("STRIKES KILL 11 NEAR KYIV",
+     "Russian strikes kill 11 in the Kyiv region. Zelenskyy urges NATO to "
+     "bolster Ukraine's air defence; the Kremlin warns of Baltic escalation.",
+     "AP / ARAB NEWS", "REPORTED", "kyiv"),
 ]
 
 # Each pictured story: (headline, body, source, status, picture key)
 PICTURED = [
-    ("SAAR SLAMS SETTLERS",
-     "Attacks hit five West Bank villages; Saar blames \u201cextremists\u201d.",
-     "TIMES NOW", "REPORTED", "village"),
-    ("CENTCOM CHIEF ENDS TOUR",
-     "Cooper ends a week touring Israel, Qatar and Saudi Arabia.",
-     "TIMES NOW", "REPORTED", "carrier"),
-    ("PEZESHKIAN DENIES RIFT",
-     "Pezeshkian: reports of a government rift are \u201cfalse and malicious\u201d.",
-     "TASNIM / TIMES NOW", "REPORTED", "podium"),
-    ("IRGC: TANKERS HIT MINES",
-     "Tehran claims two supertankers hit mines east of Hormuz; unverified.",
-     "IRGC / TIMES NOW", "CLAIM", "mines"),
-    ("JORDAN HUNTS LOST SAILOR",
-     "Jordan hunts for a sailor lost in last week's tanker attack.",
-     "TIMES NOW", "REPORTED", "lifering"),
-    ("HOUTHIS HIT TAIZ: 6 HURT",
-     "Six civilians, a child among them, hurt by shelling in Taiz.",
-     "TIMES NOW", "REPORTED", "taiz"),
-    ("FONTERRA'S 22M MILK DUMP",
-     "Fonterra seeks to dump 22M litres of milk: 4 litres per Kiwi.",
-     "RNZ", "REPORTED", "milk"),
-    ("FINAL DAY IN WELLINGTON",
-     "NZ resume on 119/2, 233 behind India's 720/9, to save the Test.",
-     "CRICINFO", "FORECAST", "cricket"),
-    ("MODI: AI CAN'T TAKE JOBS",
-     "Modi: AI cannot take the jobs of skilled workers.",
-     "NDTV", "REPORTED", "robot"),
-    ("IFFI'S BRICS ROUNDTABLE",
-     "Goa's festival brings BRICS partners together on film.",
-     "JAGRAN JOSH", "REPORTED", "film"),
+    ("MODI–SHAH TALKS END",
+     "Shah meets Modi and Murmu; hails ties \u201cstrong as Himalayas\u201d.",
+     "WION / MEA", "CONFIRMED", "nepal"),
+    ("KIWIS SAVE THE TEST",
+     "NZ bat out 120 overs to draw: 239/5 after India's 720/9.",
+     "CRICINFO", "CONFIRMED", "cricket"),
+    ("S\u00c1NCHEZ'S FORTUNE TAX",
+     "S\u00e1nchez vows a new tax on fortunes over \u20ac100m before Sunday's vote.",
+     "WION", "REPORTED", "spain"),
+    ("EISENKOT'S NETANYAHU BID",
+     "Yashar leader prepares a coalition bid to break the deadlock.",
+     "DAWN", "REPORTED", "knesset"),
+    ("GERMANY UP, FRANCE DOWN",
+     "German activity hits a 56-month high; France's PMI a 6-month low.",
+     "CNBC", "CONFIRMED", "pmi"),
+    ("EL CHAPO ISIDRO CAPTURED",
+     "FBI most-wanted fugitive seized in Sinaloa, Mexico.",
+     "AP", "CONFIRMED", "badge"),
+    ("BOLSONARO IN ICU",
+     "Ex-president in intensive care with an intestinal obstruction.",
+     "AP", "REPORTED", "hospital"),
+    ("BELGIAN AIRPORTS SHUT",
+     "Anti-austerity strike grounds flights; airports closed.",
+     "AP", "REPORTED", "airport"),
+    ("EBOLA RESPONSE HIT",
+     "WHO: fighting near the Ebola area disrupts the response.",
+     "WHO / AP", "REPORTED", "virus"),
+    ("DENMARK PHONE BAN",
+     "Copenhagen to propose a school mobile-phone ban from 2027.",
+     "REUTERS", "REPORTED", "phone"),
 ]
 
 # Briefs: (text, source, status, region) -- one line each, numbered 14-38
 BRIEFS = [
-    ("Araghchi: reopen Hormuz if blockade lifts", "TIMES NOW", "REPORTED", "MIDDLE EAST"),
-    ("Iran: no move of enriched uranium stockpile", "TIMES NOW", "REPORTED", "MIDDLE EAST"),
-    ("CENTCOM: no US jet was hit; all fighters safe", "TIMES NOW", "REPORTED", "MIDDLE EAST"),
-    ("IRGC deputy: 'enemy' seeks unrest via pressure", "IRNA", "REPORTED", "MIDDLE EAST"),
-    ("Tehran claims Patriot radars hit in Bahrain", "TASNIM", "CLAIM", "MIDDLE EAST"),
-    ("Shah presses self-reliance in Arunachal", "JAGRAN JOSH", "REPORTED", "ASIA"),
-    ("Modi opens the Nitish Setu bridge in Bihar", "NDTV", "REPORTED", "ASIA"),
-    ("RJD workers tear down posters; Tejashwi not invited", "NDTV", "REPORTED", "ASIA"),
-    ("Rajasthan BJP chief owns the panchayat poll defeat", "NDTV", "REPORTED", "ASIA"),
-    ("TDP and Jana Sena tussle over Andhra local polls", "NDTV", "REPORTED", "ASIA"),
-    ("Myanmar vows to end graft in recruitment", "MANILA TIMES", "REPORTED", "ASIA"),
-    ("China slams US ban on telecom companies", "MANILA TIMES", "REPORTED", "ASIA"),
-    ("Tokyo shut for a holiday as Asia braces", "THE EDGE", "REPORTED", "ASIA"),
-    ("China eases margin rules for investors", "THE EDGE", "REPORTED", "ASIA"),
-    ("Taiwan curbs short-selling, buys shares", "THE EDGE", "REPORTED", "ASIA"),
-    ("Nepal PM to call on President Murmu", "MEA", "FORECAST", "ASIA"),
-    ("Modi and Shah to hold a joint press conference", "MEA", "FORECAST", "ASIA"),
-    ("Kathmandu seeks three new air routes", "DECCAN HERALD", "REPORTED", "ASIA"),
-    ("Trump: contractors must check with White House", "NDTV", "REPORTED", "AMERICAS"),
-    ("Wall Street opens after Friday's rout", "BLOOMBERG", "FORECAST", "AMERICAS"),
-    ("S&P 500 is in a technical correction", "THE EDGE", "REPORTED", "AMERICAS"),
-    ("Putin says he is 'fascinated' by India's diversity", "NDTV", "REPORTED", "EUROPE"),
-    ("Europe opens after Asia's slide", "BLOOMBERG", "FORECAST", "EUROPE"),
-    ("Aussie dollar slips; bond yields fall 5bp", "THE EDGE", "REPORTED", "OCEANIA"),
-    ("Nepal PM brings a 34-member delegation", "MEA", "REPORTED", "ASIA"),
+    ("Araghchi: Hormuz reopens if blockade lifts", "AFP", "REPORTED", "MIDDLE EAST"),
+    ("Iran: no move of enriched uranium stockpile", "AFP", "REPORTED", "MIDDLE EAST"),
+    ("CENTCOM: no US jet was hit; all safe", "CENTCOM", "REPORTED", "MIDDLE EAST"),
+    ("Iran claims it downed two US drones", "IRGC", "CLAIM", "MIDDLE EAST"),
+    ("Houthis claim attack on Saudi refinery", "AP", "REPORTED", "MIDDLE EAST"),
+    ("Gaza war left widespread contamination", "AP", "REPORTED", "MIDDLE EAST"),
+    ("Bangladesh vows to arrest Hasina on return", "ET", "REPORTED", "ASIA"),
+    ("China eases margin rules; ETFs hit record", "BLOOMBERG", "REPORTED", "ASIA"),
+    ("Korea unveils $8bn market rescue fund", "BLOOMBERG", "CONFIRMED", "ASIA"),
+    ("Taiwan curbs short sales; Taiex jumps 2.2%", "REUTERS", "CONFIRMED", "ASIA"),
+    ("Kospi falls 3.3% to a 10-month low", "BLOOMBERG", "CONFIRMED", "ASIA"),
+    ("Tata Steel buys $1.67bn steel-pipe stake", "REUTERS", "REPORTED", "ASIA"),
+    ("More remains found after Indonesia fire", "AP", "REPORTED", "ASIA"),
+    ("Bomb threats hit 450 German schools", "WION", "REPORTED", "EUROPE"),
+    ("UK digs new reservoirs to fight drought", "AP", "REPORTED", "EUROPE"),
+    ("Kremlin warns of Baltic escalation", "WION", "REPORTED", "EUROPE"),
+    ("Armenia proposes new constitution for peace", "AP", "REPORTED", "EUROPE"),
+    ("9 shot at a central California concert", "AP", "REPORTED", "AMERICAS"),
+    ("US Army to detonate Iowa explosives anyway", "AP", "REPORTED", "AMERICAS"),
+    ("US shields air traffic before Thanksgiving", "ET", "REPORTED", "AMERICAS"),
+    ("Trump to host gala for plunging meme coin", "ET", "REPORTED", "AMERICAS"),
+    ("Citigroup's $35bn UK error clouds its exit", "REUTERS", "REPORTED", "AMERICAS"),
+    ("Drone attacks kill five children in Khartoum", "AP", "REPORTED", "AFRICA"),
+    ("SPLA-IO attack kills 24 civilians in S. Sudan", "AP", "REPORTED", "AFRICA"),
+    ("ASX falls for an eighth straight session", "BLOOMBERG", "REPORTED", "OCEANIA"),
 ]
 
 TIMELINE = [
     ("00:00", "Tokyo shut for a holiday; Asia braces for selling."),
-    ("00:30", "Sydney opens: Aussie dollar slips; yields fall 5bp."),
-    ("03:00", "Final day in Wellington: NZ 119/2, 233 behind."),
-    ("05:30", "Modi hosts Nepal PM Shah at Hyderabad House. [DUE]"),
-    ("08:00", "Europe opens after Asia's slide. [DUE]"),
+    ("01:00", "US futures rebound: S&P +2.2%, Nasdaq +3.0%."),
+    ("06:30", "Kospi -3.3% to a 10-month low; Taiex +2.2%."),
+    ("08:00", "Europe opens green; tech stocks rebound."),
+    ("10:00", "PMIs: Germany 56-month high, France 6-month low."),
     ("14:30", "Wall Street opens after Friday's rout. [DUE]"),
 ]
 
 NUMBERS = [
-    ("-18%", "MSCI Asia gauge vs its June peak"),
-    ("$2bn", "Kathmandu's aid ask in Delhi"),
-    ("22M", "litres of milk Fonterra seeks to dump"),
-    ("50,000", "US troops in the Middle East"),
-    ("4,550", "corporate jobs cut at NAB, Canva, Qantas"),
-    ("WORST WEEK", "Nasdaq 100 since Mar 2020"),
+    ("-5.6%", "Nasdaq 100 on Friday — its worst rout in years"),
+    ("$8bn", "Korea's market stabilisation fund"),
+    ("+3.0%", "Nasdaq 100 futures rebound on Monday"),
+    ("$3,620", "gold per ounce, up 2.5% from Friday"),
+    ("239/5", "New Zealand bat out the final day in Wellington"),
+    ("450", "German schools emailed bomb threats"),
 ]
 
-REGION_TALLY = [("ASIA", 18), ("MIDDLE EAST", 12), ("EUROPE", 2),
-                ("AMERICAS", 3), ("OCEANIA", 2), ("SPORT", 1)]
+REGION_TALLY = [("ASIA", 8), ("MIDDLE EAST", 8), ("EUROPE", 9),
+                ("AMERICAS", 7), ("AFRICA", 3), ("OCEANIA", 1),
+                ("SPORT", 1), ("GLOBAL", 1)]
 
 MAP_PINS = [
     (1, "NEW YORK", -74.0, 40.7),
     (2, "LONDON", -0.1, 51.5),
     (3, "NEW DELHI", 77.2, 28.6),
     (4, "HORMUZ", 56.5, 26.5),
-    (5, "TAIZ", 44.0, 13.6),
-    (6, "TOKYO", 139.7, 35.7),
-    (7, "SYDNEY", 151.2, -33.9),
-    (8, "WELLINGTON", 174.8, -41.3),
+    (5, "KYIV", 30.5, 50.45),
+    (6, "SEOUL", 127.0, 37.5),
+    (7, "WELLINGTON", 174.8, -41.3),
+    (8, "BRAS\u00cdLIA", -47.9, -15.8),
 ]
 
 DATE_CHECK_LEFT = (
     "COP31 COLLAPSE \u2014 no deal in Antalya; EU rejected the final text (Sun) \u00b7 "
+    "DEMOCRATS HIT 258 \u2014 Hubbard beats Foxx in NC; biggest House majority since 1992 (Sun) \u00b7 "
+    "M\u00c1RQUEZ'S 8TH TITLE \u2014 clinches the MotoGP crown with P8 in Portugal (Sun) \u00b7 "
     "ATP FINAL \u2014 Alcaraz beat Zverev 6-2, 7-6(7) (Sun) \u00b7 "
     "BEPICOLOMBO \u2014 ESA probe reaches Mercury (Sat) \u00b7 "
     "SPARTA II \u2014 drone-hit ship still burning off Finland (Sat\u2013Sun) \u00b7 "
-    "CIKANDE \u2014 7 body bags, ~50 missing (Sun) \u00b7 "
-    "DYMER \u2014 3 dead, 15 missing; Kyiv mourns today (Sun) \u00b7 "
-    "S KOREA MINISTER QUITS \u2014 AI-cheating exam chaos (Sun) \u00b7 "
-    "INDIA\u2013CHINA TALKS end after 10 days (Sun) \u00b7 "
-    "TRUMP\u2013KIM \u2014 Kim ignores Trump's calls, WSJ (Sun) \u00b7 "
+    "DYMER \u2014 Russian strike on a village north of Kyiv (Sun) \u00b7 "
     "LISBON \u2014 thousands march over living costs (Sun)"
 )
 DATE_CHECK_NOT_YET = (
-    "NOT YET: US markets open \u00b7 Modi\u2013Shah outcome \u00b7 Wellington final-day result \u00b7 "
-    "the rest of Monday's news \u2014 the full edition lands Tuesday."
+    "NOT YET: the US market open result \u00b7 the rest of Monday's news \u2014 the full edition lands Tuesday."
 )
 
 # ---------------------------------------------------------------- pictures
@@ -437,7 +434,7 @@ def pic_cricket(d, x, y, w, h):
     # scoreboard
     d.rectangle([x + 8, y + h - 18, x + 92, y + h - 4], fill=INK)
     d.text((x + 12, y + h - 17), "720/9", font=font(F_BOLD, 11), fill=(255, 255, 255))
-    d.text((x + w - 62, y + h - 17), "119/2", font=font(F_BOLD, 11), fill=NAVY)
+    d.text((x + w - 62, y + h - 17), "239/5", font=font(F_BOLD, 11), fill=NAVY)
 
 
 def pic_robot(d, x, y, w, h):
@@ -485,12 +482,175 @@ def pic_film(d, x, y, w, h):
                     fill=c)
 
 
+def pic_kyiv(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(30, 40, 70))
+    # skyline
+    for bx, bw, bh in ((x + 8, 26, 34), (x + 40, 20, 44), (x + 64, 30, 28),
+                       (x + 100, 22, 38), (x + 128, 26, 30), (x + 160, 24, 24)):
+        d.rectangle([bx, y + h - 8 - bh, bx + bw, y + h - 8], fill=(90, 100, 130))
+    # air-defence shield
+    cx, cy = x + w // 2, y + 24
+    d.polygon([(cx - 16, cy - 12), (cx + 16, cy - 12), (cx + 14, cy + 6),
+               (cx, cy + 16), (cx - 14, cy + 6)],
+              outline=(255, 210, 60), width=3)
+    d.text((x + 6, y + 2), "KYIV", font=font(F_BOLD, 10), fill=(255, 255, 255))
+    d.text((x + w - 58, y + 2), "11 KILLED", font=font(F_BOLD, 10),
+           fill=(255, 120, 100))
+
+
+def pic_spain(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(245, 240, 225))
+    # ballot box
+    bx, by = x + 24, y + 18
+    d.rectangle([bx, by, bx + 70, by + 32], fill=(31, 58, 140))
+    d.rectangle([bx + 8, by - 8, bx + 62, by], fill=(31, 58, 140))
+    d.rectangle([bx + 28, by - 6, bx + 42, by - 2], fill=(255, 255, 255))
+    d.polygon([(bx + 30, by - 18), (bx + 44, by - 18), (bx + 42, by - 2),
+               (bx + 32, by - 2)], fill=(255, 255, 255), outline=(150, 150, 150))
+    # euro coin
+    cx, cy = x + 150, y + 30
+    d.ellipse([cx - 22, cy - 22, cx + 22, cy + 22], fill=(201, 162, 39),
+              outline=(150, 110, 20), width=2)
+    d.text((cx - 10, cy - 13), "\u20ac", font=font(F_BOLD, 24),
+           fill=(255, 255, 255))
+    d.text((x + 6, y + h - 14), "\u20ac100M+", font=font(F_BOLD, 11), fill=RED)
+
+
+def pic_knesset(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(232, 235, 240))
+    # domed parliament building
+    bx, by = x + 30, y + 14
+    d.rectangle([bx, by + 18, bx + 130, by + 40], fill=(200, 200, 195))
+    d.pieslice([bx + 45, by - 6, bx + 85, by + 22], 180, 360,
+               fill=(150, 150, 145))
+    for i in range(5):
+        cx = bx + 12 + i * 26
+        d.rectangle([cx, by + 22, cx + 6, by + 40], fill=(120, 120, 115))
+    d.rectangle([bx - 6, by + 40, bx + 136, by + 44], fill=(150, 150, 145))
+    d.text((x + 6, y + 2), "KNESSET", font=font(F_BOLD, 10), fill=NAVY)
+
+
+def pic_pmi(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(255, 255, 255))
+    for gy in range(y + 8, y + h, 14):
+        d.line([x + 6, gy, x + w - 6, gy], fill=(230, 230, 230))
+    # green up arrow (DE)
+    d.line([(x + 20, y + h - 18), (x + 70, y + 22), (x + 95, y + 12)],
+           fill=(34, 120, 60), width=4)
+    d.polygon([(x + 95, y + 12), (x + 84, y + 10), (x + 92, y + 24)],
+              fill=(34, 120, 60))
+    d.text((x + 8, y + 4), "DE \u25b2", font=font(F_BOLD, 11), fill=(34, 120, 60))
+    # red down arrow (FR)
+    d.line([(x + 110, y + 16), (x + 150, y + h - 26), (x + 180, y + h - 34)],
+           fill=RED, width=4)
+    d.polygon([(x + 180, y + h - 34), (x + 168, y + h - 36), (x + 176, y + h - 22)],
+              fill=RED)
+    d.text((x + w - 52, y + h - 16), "FR \u25bc", font=font(F_BOLD, 11), fill=RED)
+
+
+def pic_badge(d, x, y, w, h):
+    import math
+    d.rectangle([x, y, x + w, y + h], fill=(240, 238, 230))
+    # gold star badge
+    cx, cy = x + 48, y + h // 2
+    pts = []
+    for i in range(10):
+        r = 26 if i % 2 == 0 else 11
+        ang = math.radians(-90 + i * 36)
+        pts.append((cx + r * math.cos(ang), cy + r * math.sin(ang)))
+    d.polygon(pts, fill=(201, 162, 39), outline=(150, 110, 20))
+    d.ellipse([cx - 8, cy - 8, cx + 8, cy + 8], fill=(255, 255, 255))
+    # handcuffs
+    hx, hy = x + 110, y + 18
+    d.ellipse([hx, hy, hx + 24, hy + 24], outline=(60, 60, 60), width=4)
+    d.ellipse([hx + 34, hy + 8, hx + 58, hy + 32], outline=(60, 60, 60), width=4)
+    d.line([hx + 24, hy + 12, hx + 34, hy + 20], fill=(60, 60, 60), width=3)
+    d.text((x + w - 58, y + 2), "FBI", font=font(F_BOLD, 12), fill=NAVY)
+
+
+def pic_hospital(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(245, 245, 240))
+    # red cross sign
+    d.rectangle([x + 10, y + 6, x + 30, y + 26], fill=(255, 255, 255),
+                outline=(200, 200, 200))
+    d.rectangle([x + 18, y + 9, x + 22, y + 23], fill=RED)
+    d.rectangle([x + 13, y + 14, x + 27, y + 18], fill=RED)
+    # bed
+    d.rectangle([x + 50, y + 28, x + 170, y + 34], fill=(31, 58, 140))
+    d.rectangle([x + 56, y + 34, x + 62, y + 44], fill=(60, 60, 60))
+    d.rectangle([x + 158, y + 34, x + 164, y + 44], fill=(60, 60, 60))
+    d.rectangle([x + 56, y + 20, x + 76, y + 28], fill=(255, 255, 255),
+                outline=(180, 180, 180))
+    d.ellipse([x + 60, y + 12, x + 72, y + 22], fill=(232, 190, 150))
+    # monitor line
+    d.line([(x + 120, y + 10), (x + 132, y + 10), (x + 138, y + 4),
+            (x + 144, y + 16), (x + 150, y + 10), (x + 168, y + 10)],
+           fill=(34, 120, 60), width=2)
+
+
+def pic_airport(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(207, 227, 238))
+    # runway
+    d.rectangle([x, y + h - 14, x + w, y + h - 8], fill=(90, 90, 90))
+    for rx in range(x + 10, x + w, 30):
+        d.line([rx, y + h - 11, rx + 14, y + h - 11], fill=(255, 255, 255),
+               width=2)
+    # grounded plane
+    px, py = x + 40, y + 16
+    d.polygon([(px, py + 10), (px + 90, py + 10), (px + 100, py + 16),
+               (px, py + 16)], fill=(255, 255, 255), outline=(120, 120, 120))
+    d.polygon([(px + 70, py + 10), (px + 84, py - 6), (px + 92, py + 10)],
+              fill=(255, 255, 255), outline=(120, 120, 120))
+    d.polygon([(px + 10, py + 16), (px + 22, py + 26), (px + 30, py + 16)],
+              fill=(255, 255, 255), outline=(120, 120, 120))
+    # red X
+    d.line([x + w - 34, y + 4, x + w - 10, y + 28], fill=RED, width=4)
+    d.line([x + w - 10, y + 4, x + w - 34, y + 28], fill=RED, width=4)
+    d.text((x + 6, y + 2), "GROUNDED", font=font(F_BOLD, 10), fill=RED)
+
+
+def pic_virus(d, x, y, w, h):
+    import math
+    d.rectangle([x, y, x + w, y + h], fill=(240, 245, 240))
+    cx, cy = x + 60, y + h // 2
+    for i in range(10):
+        ang = math.radians(i * 36)
+        ex, ey = cx + 30 * math.cos(ang), cy + 30 * math.sin(ang)
+        d.line([cx, cy, ex, ey], fill=(150, 60, 60), width=3)
+        d.ellipse([ex - 4, ey - 4, ex + 4, ey + 4], fill=(150, 60, 60))
+    d.ellipse([cx - 20, cy - 20, cx + 20, cy + 20], fill=(176, 30, 30))
+    d.ellipse([cx - 8, cy - 8, cx + 8, cy + 8], fill=(255, 200, 200))
+    # cross
+    d.rectangle([x + 130, y + 8, x + 150, y + 28], fill=(255, 255, 255),
+                outline=(200, 200, 200))
+    d.rectangle([x + 138, y + 11, x + 142, y + 25], fill=RED)
+    d.rectangle([x + 133, y + 16, x + 147, y + 20], fill=RED)
+    d.text((x + 6, y + h - 14), "EBOLA", font=font(F_BOLD, 10), fill=RED)
+
+
+def pic_phone(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(230, 235, 245))
+    # phone with a red prohibition slash over it
+    px, py = x + 70, y + 6
+    d.rounded_rectangle([px, py, px + 56, py + 40], radius=6, fill=(40, 40, 48))
+    d.rectangle([px + 6, py + 6, px + 50, py + 32], fill=(120, 200, 240))
+    d.ellipse([px + 22, py + 35, px + 34, py + 38], fill=(120, 120, 120))
+    cx, cy = x + 98, y + 26
+    d.ellipse([cx - 28, cy - 28, cx + 28, cy + 28], outline=RED, width=5)
+    d.line([cx - 20, cy + 20, cx + 20, cy - 20], fill=RED, width=5)
+    d.text((x + 6, y + 2), "SCHOOLS", font=font(F_BOLD, 10), fill=NAVY)
+    d.text((x + w - 52, y + h - 14), "2027", font=font(F_BOLD, 11), fill=RED)
+
+
 PICTURES = {
     "nepal": pic_nepal, "markets": pic_markets, "iran": pic_iran,
     "village": pic_village, "carrier": pic_carrier, "podium": pic_podium,
     "mines": pic_mines, "lifering": pic_lifering, "taiz": pic_taiz,
     "milk": pic_milk, "cricket": pic_cricket, "robot": pic_robot,
-    "film": pic_film,
+    "film": pic_film, "kyiv": pic_kyiv, "spain": pic_spain,
+    "knesset": pic_knesset, "pmi": pic_pmi, "badge": pic_badge,
+    "hospital": pic_hospital, "airport": pic_airport, "virus": pic_virus,
+    "phone": pic_phone,
 }
 
 
@@ -560,14 +720,14 @@ def draw_masthead(d, press_time):
     _x = W - 10 - _w38 - _wst
     d.text((_x, 0), "38", font=_f38, fill=GOLD)
     d.text((_x + _w38, 10), " STORIES", font=_f13, fill=(255, 255, 255))
-    _el = "EARLY EDITION \u00b7 " + press_time
+    _el = "DAY EDITION \u00b7 " + press_time
     d.text((W - 10 - d.textlength(_el, font=_f10), 46), _el, font=_f10,
            fill=(200, 200, 200))
 
 
 def draw_region_strip(d, y):
     parts = "  \u00b7  ".join("%s %d" % (n, c) for n, c in REGION_TALLY)
-    line = parts + "   =   38 STORIES  \u00b7  6 REGIONS  \u00b7  12 FIELDS"
+    line = parts + "   =   38 STORIES  \u00b7  8 REGIONS"
     fnt = font(F_BOLD, 13)
     tw = d.textlength(line, font=fnt)
     d.text(((W - tw) / 2, y), line, font=fnt, fill=NAVY)
@@ -688,8 +848,8 @@ def draw_date_check(d, y):
 
 
 def draw_sources(d, y):
-    line1 = ("SOURCES: REUTERS \u00b7 AFP \u00b7 AP \u00b7 BLOOMBERG \u00b7 THE EDGE \u00b7 DECCAN HERALD \u00b7 "
-             "MEA \u00b7 NDTV \u00b7 RNZ \u00b7 GUARDIAN \u00b7 TIMES NOW \u00b7 FOX NEWS \u00b7 CRICINFO")
+    line1 = ("SOURCES: REUTERS \u00b7 AFP \u00b7 AP \u00b7 BLOOMBERG \u00b7 WION \u00b7 DAWN \u00b7 ARAB NEWS \u00b7 "
+             "MEA \u00b7 CRICINFO \u00b7 CNBC \u00b7 ET \u00b7 GULF NEWS \u00b7 CENTCOM \u00b7 IRGC")
     line2 = ("CONFIRMED = verified by two sources  \u00b7  REPORTED = as reported  \u00b7  "
              "CLAIM = one side's account  \u00b7  FORECAST = scheduled, not yet played  \u00b7  "
              "brief numbers are coloured by status")
